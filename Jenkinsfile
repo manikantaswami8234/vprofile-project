@@ -11,14 +11,14 @@ pipeline {
         NEXUS_PASS = 'admin123'
         RELEASE_REPO = 'vprofile-release'
         CENTRAL_REPO = 'vpro-maven-central'
-        NEXUS_IP = '10.0.22.214'
+        NEXUS_IP = '34.228.219.22'
         NEXUS_PORT = '8081'
         NEXUS_GRP_REPO = 'vpro-maven-group'
         NEXUS_LOGIN = 'nexuslogin'
     }
 
     stages{
-        stage('Build'){
+        stage('BUILD'){
             steps {
                 sh 'mvn -s settings.xml -DskipTests install'
             }
